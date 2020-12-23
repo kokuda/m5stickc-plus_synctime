@@ -468,3 +468,13 @@ void AXP192::SetLDO2( bool State )
 		buf = ~(1<<2) & buf;
 	Write1Byte( 0x12 , buf );
 }
+
+void AXP192::SetLDO3( bool State )
+{
+    uint8_t buf = Read8bit(0x12);
+	if( State == true )
+    	buf = (1<<3) | buf;
+	else 
+		buf = ~(1<<3) & buf;
+	Write1Byte( 0x12 , buf );
+}

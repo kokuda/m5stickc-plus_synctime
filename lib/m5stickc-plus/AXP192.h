@@ -61,6 +61,7 @@ public:
   	uint8_t GetWarningLevel(void);	
     void SetCoulombClear();
 	void SetLDO2( bool State );
+	void SetLDO3( bool State );
 
 public:
 	void Write1Byte( uint8_t Addr ,  uint8_t Data );
